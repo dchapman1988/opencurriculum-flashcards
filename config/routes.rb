@@ -1,4 +1,6 @@
 OpencurriculumFlashcards::Application.routes.draw do
+  root to: 'decks#index'
+
   resources :decks
 
   # The priority is based upon order of creation:
