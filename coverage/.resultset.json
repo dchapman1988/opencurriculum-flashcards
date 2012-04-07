@@ -1,0 +1,55 @@
+{
+  "Unknown Test Framework": {
+    "coverage": {
+      "/home/jadams/rails/opencurriculum-flashcards/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/jadams/rails/opencurriculum-flashcards/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/jadams/rails/opencurriculum-flashcards/app/models/persistence.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/jadams/rails/opencurriculum-flashcards/app/models/persistence/deck.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1333808719
+  },
+  "Unit Tests": {
+    "coverage": {
+      "/home/jadams/rails/opencurriculum-flashcards/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/jadams/rails/opencurriculum-flashcards/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/jadams/rails/opencurriculum-flashcards/app/models/persistence/deck.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1333808433
+  }
+}

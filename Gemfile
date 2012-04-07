@@ -27,7 +27,7 @@ group :test do
   gem 'simplecov'
   gem 'simplecov-rcov'
   gem 'rcov', '0.9.11'
-  gem 'guard-minitest', '0.5.0.rc1'
+  gem 'guard-minitest', '0.5.0'
   gem 'libnotify'
   gem 'yard'
   gem 'yardstick'
