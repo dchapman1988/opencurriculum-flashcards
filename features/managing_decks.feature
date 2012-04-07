@@ -4,7 +4,7 @@ Feature: Managing Decks
   So that I can learn different subjects
 
   Scenario: Listing decks
-    Given I am on the decks page
-      And a deck exists
+    Given a deck exists
+      And I am on the decks page
      Then I should see a list of decks
       And I should see that deck in the list
