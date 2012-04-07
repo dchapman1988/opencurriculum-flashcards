@@ -1,4 +1,6 @@
-= title "Decks"
+= title t('.title')
+
+= link_to t('.new_deck'), new_deck_path, :rel => 'new-deck'
 
 %table.decks
   - @decks.each do |deck|

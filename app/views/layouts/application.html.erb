@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>OpencurriculumFlashcards</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>OpenCurriculum Flashcards</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="topbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="#">OpenCurriculum Flashcards</a>
+        </div>
+      </div>
+    </div>
+    <%= show_flash %>
+    <%= yield %>
 
-<%= yield %>
-
-</body>
+  </body>
 </html>

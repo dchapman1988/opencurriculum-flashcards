@@ -24,6 +24,7 @@ end
 group :test do
   gem 'minitest'
   gem 'minitest-reporters'
+  gem 'capybara_minitest_spec'
   gem 'simplecov'
   gem 'simplecov-rcov'
   gem 'rcov', '0.9.11'

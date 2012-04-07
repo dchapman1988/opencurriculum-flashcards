@@ -2,4 +2,11 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  decks:
+    index:
+      title: 'Decks'
+      new_deck: 'Create a new deck'
+    new:
+      title: 'New Deck'
+      name_hint: 'Enter deck name'
+    created_successfully: 'Deck created successfully.'

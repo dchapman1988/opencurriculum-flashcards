@@ -1,0 +1,8 @@
+= title t('.title')
+
+= semantic_form_for @deck, as: :deck, url: decks_path do |f|
+  = f.semantic_errors
+  = f.inputs do
+    = f.input :name, hint: t('.name_hint')
+  = f.buttons do
+    = f.commit_button button_html: { class: 'primary' }
