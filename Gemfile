@@ -33,6 +33,9 @@ group :test do
   gem 'yardstick'
   gem 'redcarpet'
   gem 'mocha'
+  gem 'database_cleaner'
+  gem "factory_girl_rails", "~> 3.0"
+  gem 'launchy'
 end
 
 group :development, :test do

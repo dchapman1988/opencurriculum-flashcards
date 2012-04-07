@@ -1,0 +1,6 @@
+= title "Decks"
+
+%table.decks
+  - @decks.each do |deck|
+    %tr
+      %td.name= deck.name
