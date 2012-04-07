@@ -16,7 +16,7 @@ class DecksController < ApplicationController
     use_case_result = use_case.execute!
     @deck = use_case_result.data[:deck]
     if use_case_result.successful?
-      flash[:notice] = t('decks.created_successfully')
+      flash[:success] = t('decks.created_successfully')
       redirect_to deck_path(@deck)
     else
       render 'new'
