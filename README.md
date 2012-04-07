@@ -1,6 +1,6 @@
 ## OpenCurriculum Flashcards
 This is a flashcard webapp for the OpenCurriculum suite.  It uses [Spaced
-Repetition](http://en.wikipedia.org/wiki/Spaced_repetition) to determine how to
+Repetition][spaced-repetition] to determine how to
 best queue up the next flashcard.
 
 ### Architecture
@@ -39,3 +39,5 @@ To run them automatically while developing, run:
 To run the documentation server:
 
     bundle exec yard server -r
+
+[spaced-repetition]: http://en.wikipedia.org/wiki/Spaced_repetition
