@@ -10,3 +10,12 @@ en:
       title: 'New Deck'
       name_hint: 'Enter deck name'
     created_successfully: 'Deck created successfully.'
+    review:
+      correct: 'I got it right'
+      incorrect: "I didn't know that one"
+  cards:
+    new:
+      title: 'New Card'
+  answers:
+    create:
+      created_successfully: 'Answer created successfully.'

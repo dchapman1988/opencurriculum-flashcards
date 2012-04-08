@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120408000254) do
+ActiveRecord::Schema.define(:version => 20120408213659) do
+
+  create_table "answers", :force => true do |t|
+    t.integer  "card_id"
+    t.boolean  "correct"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "cards", :force => true do |t|
     t.string   "name"

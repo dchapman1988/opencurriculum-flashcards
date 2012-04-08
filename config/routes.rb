@@ -6,7 +6,9 @@ OpencurriculumFlashcards::Application.routes.draw do
       get :review
     end
   end
-  resources :cards
+  resources :cards do
+    resources :answers
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

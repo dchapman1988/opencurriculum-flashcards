@@ -1,4 +1,6 @@
 .card
-  Card is here
+  = render 'cards/card', card: @card
   .answer-ui
-    Answer ui is here
+    = semantic_form_for @answer, :url => card_answers_path(@card) do |f|
+      = button_tag t('.correct'), name: 'correct'
+      = button_tag t('.incorrect'), name: 'incorrect'
