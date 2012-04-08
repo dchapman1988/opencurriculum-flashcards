@@ -16,6 +16,7 @@ require 'ostruct'
 MiniTest::Unit.runner = MiniTest::SuiteRunner.new
 MiniTest::Unit.runner.reporters << MiniTest::Reporters::SpecReporter.new
 if ENV['JENKINS']
+  require "#{File.dirname(__FILE__)}/support/minitest_junit"
   MiniTest::Unit.runner.reporters << MiniTest::Reporters::JUnitReporter.new
 end
 
