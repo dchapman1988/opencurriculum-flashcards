@@ -1,1 +1,8 @@
 = title @deck
+
+= link_to t('.new_card'), new_card_path(deck_id: @deck.id), :rel => 'new-card'
+
+%table.cards
+  - @cards.each do |card|
+    %tr
+      %td.name= card.name

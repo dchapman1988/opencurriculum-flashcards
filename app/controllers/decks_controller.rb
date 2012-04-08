@@ -27,5 +27,8 @@ class DecksController < ApplicationController
     use_case = UseCase::Deck::Get.new(id: params[:id], deck_class: Persistence::Deck)
     use_case_result = use_case.execute!
     @deck = use_case_result.data[:deck]
+    deck_use_case = UseCase::Card::List.new(deck_id: @deck.id, card_class: Persistence::Card)
+    deck_use_case_result = deck_use_case.execute!
+    @cards = deck_use_case_result.data[:cards]
   end
 end

@@ -1,0 +1,11 @@
+= title t('.title')
+
+= semantic_form_for @card, as: :card, url: cards_path do |f|
+  = f.semantic_errors
+  = f.inputs do
+    = f.input :name, hint: t('.name_hint')
+    = f.input :front_content, hint: t('.front_content_hint')
+    = f.input :back_content, hint: t('.back_content_hint')
+    = f.hidden_field :deck_id
+  = f.actions do
+    = f.action :submit, button_html: { class: 'primary' }
