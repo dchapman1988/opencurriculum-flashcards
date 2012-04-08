@@ -18,4 +18,6 @@ en:
       title: 'New Card'
   answers:
     create:
-      created_successfully: 'Answer created successfully.'
+      created_successfully_correct: 'You got it! Good job.'
+      created_successfully_incorrect: "You'll do better next time."
+      created_unsuccessfully: 'There was a problem storing the answer.'

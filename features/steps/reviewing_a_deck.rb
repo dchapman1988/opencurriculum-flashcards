@@ -20,7 +20,15 @@ class ReviewingADeck < Spinach::FeatureSteps
     click_button I18n.t('decks.review.correct')
   end
 
-  Then 'the answer should be created successfully' do
-    page.must_have_content I18n.t('answers.create.created_successfully')
+  When 'I indicate that I did not know the answer' do
+    click_button I18n.t('decks.review.incorrect')
+  end
+
+  Then 'the answer should be created successfully and recorded as correct' do
+    page.must_have_content I18n.t('answers.create.created_successfully_correct')
+  end
+
+  Then 'the answer should be created successfully and recorded as incorrect' do
+    page.must_have_content I18n.t('answers.create.created_successfully_incorrect')
   end
 end

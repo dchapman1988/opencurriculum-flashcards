@@ -42,6 +42,7 @@ group :test do
 end
 
 group :development, :test do
+  gem 'debugger'
   gem 'spinach-rails', '~> 0.1.5'
   gem 'pry'
   gem 'capistrano'
