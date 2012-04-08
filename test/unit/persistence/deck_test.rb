@@ -1,4 +1,4 @@
-require 'test_helper'
+require 'rails_helper'
 
 describe Persistence::Deck do
   it "is a class" do

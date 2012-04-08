@@ -1,4 +1,4 @@
-require_relative '../../test/test_helper'
+require_relative '../../test/rails_helper'
 require 'spinach-rails'
 
 Spinach.hooks.before_scenario do |scenario_data|

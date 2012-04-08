@@ -96,6 +96,9 @@ GEM
       thor (~> 0.14.6)
     guard-minitest (0.5.0)
       guard (>= 0.4)
+    guard-spinach (0.0.1.1)
+      guard
+      spinach
     haml (3.1.4)
     heroku (2.24.0)
       launchy (>= 0.3.2)
@@ -240,6 +243,7 @@ DEPENDENCIES
   formtastic!
   formtastic-bootstrap!
   guard-minitest (= 0.5.0)
+  guard-spinach
   haml
   heroku
   interactive_editor (~> 0.0.10)

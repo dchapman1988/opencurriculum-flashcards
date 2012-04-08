@@ -1,4 +1,4 @@
-require 'test_helper'
+require 'use_case_helper'
 
 describe UseCase::Card::Get do
   describe "when executed" do

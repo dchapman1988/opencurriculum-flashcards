@@ -29,7 +29,6 @@ group :test do
   gem 'simplecov'
   gem 'simplecov-rcov'
   gem 'rcov', '0.9.11'
-  gem 'guard-minitest', '0.5.0'
   gem 'libnotify'
   gem 'yard'
   gem 'yardstick'
@@ -38,6 +37,8 @@ group :test do
   gem 'database_cleaner'
   gem "factory_girl_rails", "~> 3.0"
   gem 'launchy'
+  gem 'guard-minitest', '0.5.0'
+  gem 'guard-spinach'
 end
 
 group :development, :test do

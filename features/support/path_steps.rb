@@ -12,4 +12,8 @@ module PathSteps
   Given 'I am on the deck\'s page' do
     visit deck_path(@deck)
   end
+
+  Given 'I am on the review page for that deck' do
+    visit review_deck_path(@deck)
+  end
 end

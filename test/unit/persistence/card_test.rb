@@ -1,4 +1,4 @@
-require 'test_helper'
+require 'rails_helper'
 
 describe Persistence::Card do
   it "is a class" do

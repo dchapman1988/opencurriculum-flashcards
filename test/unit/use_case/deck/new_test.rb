@@ -1,4 +1,4 @@
-require 'test_helper'
+require 'use_case_helper'
 
 describe UseCase::Deck::New do
   describe "when executed" do
