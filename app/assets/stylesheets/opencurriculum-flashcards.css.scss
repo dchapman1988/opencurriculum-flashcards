@@ -1,5 +1,36 @@
 @import 'bootstrap';
+@import "compass/css3";
+
+$card-unit: 8em;
+$drop-shadow-color: rgba(black, 0.2);
+
+/* apply a natural box layout model to all elements */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 body{
   margin-top: 50px;
+  background-color: #eee;
+}
+
+.card-side{
+  padding: 1em;
+  width: 5 * $card-unit;
+  height: 3 * $card-unit;
+  background-color: white;
+  @include border-radius(1em);
+  @include single-box-shadow($drop-shadow-color);
+}
+
+.front-content .card-side{
+  cursor: pointer;
+}
+
+.back-content{
+  display: none;
+  clear: right;
+}
+
+.card-content{
+  float: left;
+  margin-right: 2em;
 }

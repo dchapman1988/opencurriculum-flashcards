@@ -4,6 +4,10 @@ module ApplicationHelper
     content_for(:title) do
       str
     end
-    content_tag('h2', str)
+    content_tag('span', str)
+  end
+
+  def bootstrap_icon(name)
+    content_tag('i', nil, :class => "icon-#{name}")
   end
 end

@@ -1,8 +1,17 @@
-= title @deck
+%ul.breadcrumb
+  %li
+    = link_to(t('decks.index.title'), decks_path)
+    %span.divider /
+  %li= title @deck
 
-= link_to t('.new_card'), new_card_path(deck_id: @deck.id), :rel => 'new-card'
+.btn-group
+  = link_to bootstrap_icon('plus') + t(:new_card), new_card_path(deck_id: @deck.id), rel: 'new-card', class: 'btn'
 
-%table.cards
-  - @cards.each do |card|
+%table.table.table-striped.cards
+  %thead
     %tr
-      %td.name= card.name
+      %th Name
+  %tbody
+    - @cards.each do |card|
+      %tr
+        %td.name= link_to(card.name, card_path(card))

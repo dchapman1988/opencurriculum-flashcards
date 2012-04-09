@@ -1,3 +1,10 @@
-= title @card
+%ul.breadcrumb
+  %li
+    = link_to(t('decks.index.title'), decks_path)
+    %span.divider /
+  %li
+    = link_to(@card.deck, deck_path(@card.deck))
+    %span.divider /
+  %li= title @card
 
 = render 'card', card: @card

@@ -1,8 +1,13 @@
-= title t('.title')
+%ul.breadcrumb
+  %li= title(t('.title'))
 
-= link_to t('.new_deck'), new_deck_path, :rel => 'new-deck'
+= link_to t('.new_deck'), new_deck_path, :rel => 'new-deck', :class => 'btn btn-primary'
 
-%table.decks
-  - @decks.each do |deck|
+%table.table.table-striped.decks
+  %thead
     %tr
-      %td.name= deck.name
+      %th Name
+  %tbody
+    - @decks.each do |deck|
+      %tr
+        %td.name= link_to(deck.name, deck_path(deck))

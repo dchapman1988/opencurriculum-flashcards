@@ -1,9 +1,16 @@
-%h3 Front
-.front_content
-  :markdown
-    #{card.front_content}
+.front-content.card-content
+  %h3 Front
+  .card-side
+    :markdown
+      #{card.front_content}
 
-%h3 Back
-.back_content
-  :markdown
-    #{card.back_content}
+.back-content.card-content
+  %h3 Back
+  .card-side
+    :markdown
+      #{card.back_content}
+
+:javascript
+  $('.front-content .card-side').on('click', function(){
+    $('.back-content').toggle();
+  });

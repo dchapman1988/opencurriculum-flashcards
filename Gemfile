@@ -9,6 +9,7 @@ gem 'haml'
 gem 'formtastic', :git => 'git://github.com/justinfrench/formtastic.git', :branch => '2.1-stable'
 gem 'formtastic-bootstrap', :git => 'https://github.com/cgunther/formtastic-bootstrap.git', :branch => 'bootstrap2-rails3-2-formtastic-2-1'
 gem 'bluecloth'
+gem 'simple-navigation'
 
 gem 'heroku'
 
@@ -19,6 +20,8 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'therubyracer', :platform => :ruby
   gem 'uglifier', '>= 1.0.3'
+  gem 'compass', '0.12.1'
+  gem 'compass-rails'
   gem 'bootstrap-sass'
 end
 
