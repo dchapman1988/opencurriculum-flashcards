@@ -1,7 +1,7 @@
 %ul.breadcrumb
   %li= title(t('.title'))
 
-= link_to t('.new_deck'), new_deck_path, :rel => 'new-deck', :class => 'btn btn-primary'
+= link_to bootstrap_icon('plus') + ' ' + t('.new_deck'), new_deck_path, :rel => 'new-deck', :class => 'btn'
 
 %table.table.table-striped.decks
   %thead
