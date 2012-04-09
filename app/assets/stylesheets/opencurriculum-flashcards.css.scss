@@ -27,6 +27,10 @@ body{
 
 // Landscape phones and down
 @media (max-width: 480px) {
+  body{
+    margin-top: 70px;
+  }
+
   .card-side{
     padding: .25em;
     width: 3 * $card-unit;
