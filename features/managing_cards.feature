@@ -15,3 +15,9 @@ Feature: Managing Cards
      When I click the new card link
       And I give the card a name and content and click save
      Then the card should be created successfully
+
+  Scenario: Editing a card
+    Given a card exists
+      And I am on the card's edit page
+     When I give the card a new name
+     Then the card should be updated successfully

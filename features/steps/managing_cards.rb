@@ -25,4 +25,13 @@ class ManagingCards < Spinach::FeatureSteps
   Then 'the card should be created successfully' do
     page.must_have_content I18n.t('cards.created_successfully')
   end
+
+  When 'I give the card a new name' do
+    fill_in 'Name', with: 'New Name'
+    click_button 'Update Card'
+  end
+
+  Then 'the card should be updated successfully' do
+    page.must_have_content 'New Name'
+  end
 end

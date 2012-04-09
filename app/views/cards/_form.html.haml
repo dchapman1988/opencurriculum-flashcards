@@ -1,0 +1,8 @@
+= f.semantic_errors
+= f.inputs do
+  = f.input :name, hint: t('.name_hint')
+  = f.input :front_content, hint: t('.front_content_hint').html_safe, input_html: { class: 'input-xlarge', rows: 5 }
+  = f.input :back_content, hint: t('.back_content_hint'), input_html: { class: 'input-xlarge', rows: 5 }
+  = f.hidden_field :deck_id
+= f.actions do
+  = f.action :submit, button_html: { class: 'primary' }

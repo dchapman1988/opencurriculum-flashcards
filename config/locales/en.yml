@@ -25,6 +25,11 @@ en:
       back_content_hint: "Supports markdown syntax."
     show:
       edit: 'Edit Card'
+    update:
+      successful: 'Card updated successfully.'
+      unsuccessful: 'Card updated failed.'
+    edit:
+      title: 'Edit Card'
   answers:
     create:
       created_successfully_correct: 'You got it! Good job.'
