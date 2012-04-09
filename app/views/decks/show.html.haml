@@ -6,6 +6,7 @@
 
 .btn-group
   = link_to bootstrap_icon('plus') + t(:new_card), new_card_path(deck_id: @deck.id), rel: 'new-card', class: 'btn'
+  = link_to bootstrap_icon('refresh') + t('.review'), review_deck_path(@deck), rel: 'review-deck', class: 'btn'
 
 %table.table.table-striped.cards
   %thead

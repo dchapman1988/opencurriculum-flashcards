@@ -14,6 +14,10 @@ frequently than the cards which you got right.
 Markdown may be used to define content for either the front or the back of the
 card.
 
+### TO DO
+- Refactor the bootstrap icons
+- Refactor the breadcrumbs
+
 ### Development
 
 To get started developing from scratch, run the following from the root dir:

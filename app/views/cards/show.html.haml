@@ -7,4 +7,7 @@
     %span.divider /
   %li= title @card
 
+.btn-group
+  = link_to bootstrap_icon('edit') + ' ' + t('.edit'), edit_card_path(@card), rel: 'edit-card', class: 'btn'
+
 = render 'card', card: @card

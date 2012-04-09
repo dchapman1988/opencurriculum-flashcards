@@ -1,6 +1,16 @@
+%ul.breadcrumb
+  %li
+    = link_to(t('decks.index.title'), decks_path)
+    %span.divider /
+  %li
+    = link_to(@card.deck, deck_path(@card.deck))
+    %span.divider /
+  %li= title(t('.title'))
+- add_title_part(@card.deck)
+
 .card
   .answer-ui
     = semantic_form_for @answer, :url => card_answers_path(@card) do |f|
-      = button_tag t('.correct'), name: 'correct', class: 'btn btn-success'
-      = button_tag t('.incorrect'), name: 'incorrect', class: 'btn btn-danger'
+      = button_tag bootstrap_icon('ok', color: 'white') + ' ' + t('.correct'), name: 'correct', class: 'btn btn-success'
+      = button_tag bootstrap_icon('remove', color: 'white') + ' ' + t('.incorrect'), name: 'incorrect', class: 'btn btn-danger'
   = render 'cards/card', card: @card

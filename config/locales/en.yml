@@ -15,11 +15,16 @@ en:
       name_hint: 'Enter deck name'
     created_successfully: 'Deck created successfully.'
     review:
+      title: 'Review'
       correct: 'I got it right'
       incorrect: "I didn't know that one"
   cards:
     new:
       title: 'New Card'
+      front_content_hint: "Supports markdown syntax.  <a href='http://en.wikipedia.org/wiki/Markdown'>Syntax documentation here.</a>"
+      back_content_hint: "Supports markdown syntax."
+    show:
+      edit: 'Edit Card'
   answers:
     create:
       created_successfully_correct: 'You got it! Good job.'

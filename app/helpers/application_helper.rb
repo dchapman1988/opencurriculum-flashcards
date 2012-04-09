@@ -1,13 +1,18 @@
 module ApplicationHelper
-  def title(*str_arr)
-    str = str_arr.join(" | ")
+  def add_title_part(str)
     content_for(:title) do
-      str
+      str.to_s + " | "
     end
+  end
+
+  def title(str)
+    add_title_part(str)
     content_tag('span', str)
   end
 
-  def bootstrap_icon(name)
-    content_tag('i', nil, :class => "icon-#{name}")
+  def bootstrap_icon(name, options={})
+    classes = ["icon-#{name}"]
+    classes << 'icon-white' if options[:color] == 'white'
+    content_tag('i', nil, :class => classes.join(' '))
   end
 end
