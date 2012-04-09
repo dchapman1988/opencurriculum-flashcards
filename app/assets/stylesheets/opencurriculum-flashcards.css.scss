@@ -22,8 +22,18 @@ body{
   min-height: 3 * $card-unit;
   background-color: $card-background-color;
   cursor: pointer;
-  @include border-radius(1em);
+  text-align: center;
   @include single-box-shadow($drop-shadow-color);
+
+  .content{
+    min-height: $card-unit;
+    margin: auto;
+    font-size: 2em;
+    p{
+      font-size: 2em;
+      line-height: 2em;
+    }
+  }
 }
 
 // Landscape phones and down

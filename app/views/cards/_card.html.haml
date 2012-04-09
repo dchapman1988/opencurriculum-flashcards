@@ -2,14 +2,16 @@
 .front-content.card-content
   %h4 Front
   .card-side
-    :markdown
-      #{card.front_content}
+    .content
+      :markdown
+        #{card.front_content}
 
 .back-content.card-content
   %h4 Back
   .card-side
-    :markdown
-      #{card.back_content}
+    .content
+      :markdown
+        #{card.back_content}
 
 :javascript
   $('.card-side').on('click', function(){
