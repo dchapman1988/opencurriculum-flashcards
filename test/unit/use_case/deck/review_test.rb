@@ -7,6 +7,8 @@ describe UseCase::Deck::Review do
       get_use_case_result = mock()
       @deck = mock()
       cards = mock()
+      cards.expects(:all).returns(cards)
+      cards.expects(:sort_by).returns(cards)
       @card = mock()
       @answer = mock()
       get_use_case_result.expects(:data).returns({ deck: @deck }).once

@@ -4,6 +4,7 @@ class Persistence::Card < ActiveRecord::Base
   validates_presence_of :name, :front_content, :back_content, :deck_id
 
   belongs_to :deck
+  has_many :answers
 
   def to_s
     name

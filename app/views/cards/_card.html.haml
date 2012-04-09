@@ -1,16 +1,18 @@
+%h3= card
 .front-content.card-content
-  %h3 Front
+  %h4 Front
   .card-side
     :markdown
       #{card.front_content}
 
 .back-content.card-content
-  %h3 Back
+  %h4 Back
   .card-side
     :markdown
       #{card.back_content}
 
 :javascript
-  $('.front-content .card-side').on('click', function(){
+  $('.card-side').on('click', function(){
     $('.back-content').toggle();
+    $('.front-content').toggle();
   });

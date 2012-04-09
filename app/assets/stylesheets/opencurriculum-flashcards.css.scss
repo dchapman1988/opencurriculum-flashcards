@@ -21,6 +21,7 @@ body{
   width: 5 * $card-unit;
   min-height: 3 * $card-unit;
   background-color: $card-background-color;
+  cursor: pointer;
   @include border-radius(1em);
   @include single-box-shadow($drop-shadow-color);
 }
@@ -36,10 +37,6 @@ body{
     width: 3 * $card-unit;
     min-height: 3 * $card-unit;
   }
-}
-
-.front-content .card-side{
-  cursor: pointer;
 }
 
 .back-content{
