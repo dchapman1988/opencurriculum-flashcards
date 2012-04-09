@@ -8,6 +8,9 @@ $drop-shadow-color: rgba(black, 0.2);
 /* apply a natural box layout model to all elements */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+// Make images fit containers
+img { max-width: 100%; max-height: 100%;}
+
 body{
   margin-top: 50px;
   background-color: white;
@@ -16,7 +19,7 @@ body{
 .card-side{
   padding: 1em;
   width: 5 * $card-unit;
-  height: 3 * $card-unit;
+  min-height: 3 * $card-unit;
   background-color: $card-background-color;
   @include border-radius(1em);
   @include single-box-shadow($drop-shadow-color);
