@@ -25,6 +25,15 @@ body{
   @include single-box-shadow($drop-shadow-color);
 }
 
+// Landscape phones and down
+@media (max-width: 480px) {
+  .card-side{
+    padding: .25em;
+    width: 3 * $card-unit;
+    min-height: 3 * $card-unit;
+  }
+}
+
 .front-content .card-side{
   cursor: pointer;
 }
