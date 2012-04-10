@@ -3,7 +3,7 @@ class AnswersController < ApplicationController
 
   def create
     correct = params.keys.include?('correct')
-    use_case = UseCase::Answer::Create.new(card: @card, answer_class: Persistence::Answer, correct: correct)
+    use_case = UseCase::Answer::Create.new(card: @card, answer_class: PersistencePrefix::Answer, correct: correct)
     result = use_case.execute!
     if result.successful?
       if correct
@@ -19,7 +19,7 @@ class AnswersController < ApplicationController
 
   protected
   def load_card
-    use_case = UseCase::Card::Get.new(id: params[:card_id], card_class: Persistence::Card)
+    use_case = UseCase::Card::Get.new(id: params[:card_id], card_class: PersistencePrefix::Card)
     result = use_case.execute!
     @card = result.data[:card]
   end

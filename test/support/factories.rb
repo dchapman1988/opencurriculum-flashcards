@@ -1,9 +1,9 @@
 FactoryGirl.define do
-  factory :deck, class: Persistence::Deck do
+  factory :deck, class: PersistencePrefix::Deck do
     name "Topic"
   end
 
-  factory :card, class: Persistence::Card do
+  factory :card, class: PersistencePrefix::Card do
     deck
     name "Atomic Item"
     front_content "Testing?"
