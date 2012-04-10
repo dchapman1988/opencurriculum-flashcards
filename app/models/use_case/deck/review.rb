@@ -22,6 +22,7 @@ module UseCase
         card = sorted_by_recent_answer.first
         if card
           answer = @answer_class.new(card: card)
+          card = CardDecorator.new(card)
           return UseCase::Result.new(success: true, data: { deck: deck, card: card, answer: answer })
         else
           return UseCase::Result.new(success: false, data: { deck: deck, card: card })

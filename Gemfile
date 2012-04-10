@@ -10,6 +10,8 @@ gem 'formtastic', :git => 'git://github.com/justinfrench/formtastic.git', :branc
 gem 'formtastic-bootstrap', :git => 'https://github.com/cgunther/formtastic-bootstrap.git', :branch => 'bootstrap2-rails3-2-formtastic-2-1'
 gem 'bluecloth'
 gem 'simple-navigation'
+gem 'draper'
+gem 'wordnik'
 
 gem 'heroku'
 

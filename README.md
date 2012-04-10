@@ -17,6 +17,13 @@ card.
 ### TO DO
 - Refactor the bootstrap icons
 - Refactor the breadcrumbs
+- Build a card decorator
+  - Build in a plugin system for the decorator, so you can place tags in the
+    markdown content to do more interesting things.
+    - [= pronounce 'father' ] - hit wordnik api, embed audio tag to play
+      returned audio file
+    - other ideas?
+- Cache card content?  Not sure, wordnik audio links expire after a while
 
 ### Development
 
