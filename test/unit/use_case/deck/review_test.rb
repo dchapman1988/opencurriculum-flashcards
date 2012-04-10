@@ -28,7 +28,6 @@ describe UseCase::Deck::Review do
     it "returns a UseCase::Result" do
       result = @use_case.execute!
       result.must_be_kind_of UseCase::Result
-      result.data[:card].must_equal @card
       result.data[:deck].must_equal @deck
       result.data[:answer].must_equal @answer
     end
