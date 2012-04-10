@@ -40,6 +40,7 @@ class CardsController < ApplicationController
   def load_card
     use_case = UseCase::Card::Get.new(id: params[:id], card_class: PersistencePrefix::Card)
     use_case_result = use_case.execute!
+    @decorated_card = use_case_result.data[:decorated_card]
     @card = use_case_result.data[:card]
   end
 end

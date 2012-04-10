@@ -20,6 +20,8 @@ if ENV['JENKINS']
   MiniTest::Unit.runner.reporters << MiniTest::Reporters::JUnitReporter.new
 end
 
+require "#{File.dirname(__FILE__)}/../app/models/flashcards"
+
 # NOTE: This file does not load all of the libraries necessary to run any given
 # tests.  That falls to rails_helper, use_case_helper, etc.  This way, we can
 # keep our dependencies low when running tests that don't depend on the whole

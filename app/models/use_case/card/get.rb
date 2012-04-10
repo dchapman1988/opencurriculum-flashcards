@@ -8,8 +8,8 @@ module UseCase
       def execute!
         card = @card_class.find(@id)
         if card
-          card = CardDecorator.new(card)
-          return UseCase::Result.new(success: true, data: { card: card })
+          decorated_card = CardDecorator.new(card)
+          return UseCase::Result.new(success: true, data: { card: card, decorated_card: decorated_card })
         else
           return UseCase::Result.new(success: false, data: { card: card })
         end

@@ -1,4 +1,4 @@
-require 'use_case_helper'
+require 'rails_helper'
 
 describe UseCase::Card::Get do
   describe "when executed" do

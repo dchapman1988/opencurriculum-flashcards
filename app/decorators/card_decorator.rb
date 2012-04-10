@@ -1,5 +1,5 @@
 class CardDecorator < ApplicationDecorator
-  decorates :card, class: Persistence::Card
+  decorates :card, class: PersistencePrefix::Card
 
   def front_content
     embed_plugins(card.front_content)
@@ -14,18 +14,16 @@ class CardDecorator < ApplicationDecorator
       the_match = Regexp.last_match
       keh_code = $1
       module_output = ""
-      case keh_code.strip
-      when /^pronounce(.*)/
-        module_output = send(:pronounce, $1.strip)
+      plugin_invocation = keh_code.strip
+      method, *rest = plugin_invocation.split(' ')
+      rest = rest.join(' ')
+      plugin_hash = Flashcards::PluginManager.instance.plugin_hash
+      if plugin_hash.has_key?(method)
+        module_output = plugin_hash[method].new(rest.strip).execute!
       end
       string[the_match.begin(0)...the_match.end(0)] = module_output
     end
     string
-  end
-
-  def pronounce(word)
-    audio_file = Utility::PronunciationFileFetcher.new(word, Wordnik.word).execute!
-    h.tag(:audio, src: audio_file, preload: 'auto')
   end
 
   def to_s
