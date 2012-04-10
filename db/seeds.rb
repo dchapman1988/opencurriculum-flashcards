@@ -3,12 +3,13 @@ def log(message)
 end
 
 log "Create a couple of decks - Vocabulary and Math"
-vocab_deck = Persistence::Deck.create(name: "K5 Vocabulary")
-math_deck = Persistence::Deck.create(name: "K5 Math")
+vocab_deck = PersistencePrefix::Deck.create(name: "K5 Vocabulary")
+math_deck = PersistencePrefix::Deck.create(name: "K5 Math")
 
 log "Create some Vocabulary cards"
-%w(dog dad mom get three zero).each do |word|
-  vocab_deck.cards.create(name: word, front_content: word, back_content: word)
+%w(who see was we eight ate so do they me my love like what you when Jesus favorite number color).each do |word|
+  content = "#{word}\n[%= pronounce #{word} %]"
+  vocab_deck.cards.create(name: word, front_content: content, back_content: content)
 end
 
 log "Create some Math cards"
