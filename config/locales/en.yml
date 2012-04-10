@@ -23,6 +23,7 @@ en:
       title: 'New Card'
       front_content_hint: "Supports markdown syntax.  <a href='http://en.wikipedia.org/wiki/Markdown'>Syntax documentation here.</a>"
       back_content_hint: "Supports markdown syntax."
+      name_hint: 'Enter card name'
     show:
       edit: 'Edit Card'
     update:
