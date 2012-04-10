@@ -7,7 +7,7 @@ module Utility
 
     def execute!
       response = @fetcher.get_audio(@word)
-      response[0]["fileUrl"]
+      response.last["fileUrl"]
     end
   end
 end
