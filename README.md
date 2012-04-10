@@ -25,6 +25,7 @@ card.
     - other ideas?
 - Cache card content?  Not sure, wordnik audio links expire after a while
 - Entering `[%= pronounce 'foo' %]` throws 500 (note the quote marks)
+- text after first plugin block apparently gets chomped...
 
 ### Development
 
