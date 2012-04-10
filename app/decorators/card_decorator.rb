@@ -25,9 +25,7 @@ class CardDecorator < ApplicationDecorator
 
   def pronounce(word)
     audio_file = Utility::PronunciationFileFetcher.new(word, Wordnik.word).execute!
-    h.content_tag(:audio, controls: 'controls') do |t|
-      h.tag(:source, src: audio_file, type: 'audio/mp3')
-    end
+    h.tag(:audio, src: audio_file, preload: 'auto')
   end
 
   def to_s
