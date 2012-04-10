@@ -1,3 +1,4 @@
+= button_tag 'Flip Card', id: 'flip-card', class: 'btn'
 %h3= card
 .front-content.card-content
   %h4 Front
@@ -14,7 +15,7 @@
         #{card.back_content}
 
 :javascript
-  $('.card-side').on('click', function(){
+  $('#flip-card').on('click', function(){
     $('.back-content').toggle();
     $('.front-content').toggle();
   });

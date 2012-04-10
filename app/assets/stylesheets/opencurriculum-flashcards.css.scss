@@ -21,7 +21,6 @@ body{
   width: 5 * $card-unit;
   min-height: 3 * $card-unit;
   background-color: $card-background-color;
-  cursor: pointer;
   text-align: center;
   @include single-box-shadow($drop-shadow-color);
 
