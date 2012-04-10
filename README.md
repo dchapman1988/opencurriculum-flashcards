@@ -24,6 +24,7 @@ card.
       returned audio file
     - other ideas?
 - Cache card content?  Not sure, wordnik audio links expire after a while
+- Entering `[%= pronounce 'foo' %]` throws 500 (note the quote marks)
 
 ### Development
 
