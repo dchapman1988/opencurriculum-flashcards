@@ -1,6 +1,20 @@
+module Persistence
+end
+
+class Persistence::ActiveRecord
+end
+
+class Persistence::MongoidPersistence
+end
+
 require File.expand_path('../boot', __FILE__)
 
-require 'rails/all'
+#require 'rails/all'
+require "action_controller/railtie"
+require "action_mailer/railtie"
+require "active_resource/railtie"
+require "rails/test_unit/railtie"
+require "sprockets/railtie" # Uncomment this line for Rails 3.1+
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -34,6 +48,7 @@ module OpencurriculumFlashcards
     # config.i18n.default_locale = :de
 
     # Configure the default encoding used in templates for Ruby 1.9.
+   PersistencePrefix = Persistence::MongoidPersistence
     config.encoding = "utf-8"
 
     # Configure sensitive parameters which will be filtered from the log file.
@@ -48,7 +63,9 @@ module OpencurriculumFlashcards
     # This will create an empty whitelist of attributes available for mass-assignment for all models
     # in your app. As such, your models will need to explicitly whitelist or blacklist accessible
     # parameters by using an attr_accessible or attr_protected declaration.
-    config.active_record.whitelist_attributes = true
+    if PersistencePrefix == Persistence::ActiveRecord
+      config.active_record.whitelist_attributes = true
+    end
 
     # Enable the asset pipeline
     config.assets.enabled = true

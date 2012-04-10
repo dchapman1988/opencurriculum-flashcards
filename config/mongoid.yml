@@ -1,0 +1,7 @@
+development:
+  host: localhost
+  database: opencurriculum_flashcards_development
+
+test:
+  host: localhost
+  database: opencurriculum_flashcards_test

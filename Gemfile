@@ -4,6 +4,11 @@ gem 'rails', '3.2.3'
 
 gem 'pg'
 
+group :mongoid do
+  gem "mongoid", "~> 2.4", :require => "Mongoid"
+  gem "bson_ext", "~> 1.5"
+end
+
 gem 'jquery-rails'
 gem 'haml'
 gem 'formtastic', :git => 'git://github.com/justinfrench/formtastic.git', :branch => '2.1-stable'

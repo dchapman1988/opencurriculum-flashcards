@@ -1,11 +1,13 @@
-class Persistence::ActiveRecord::Deck < ActiveRecord::Base
-  attr_accessible :name
+if PersistencePrefix == Persistence::ActiveRecord
+  class Persistence::ActiveRecord::Deck < ActiveRecord::Base
+    attr_accessible :name
 
-  validates_presence_of :name
+    validates_presence_of :name
 
-  has_many :cards
+    has_many :cards
 
-  def to_s
-    name
+    def to_s
+      name
+    end
   end
 end

@@ -1,1 +1,0 @@
-PersistencePrefix = Persistence::ActiveRecord
