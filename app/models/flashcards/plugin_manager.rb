@@ -1,5 +1,3 @@
-require 'sprockets'
-
 module Flashcards
   class PluginManager
     def self.instance

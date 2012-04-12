@@ -1,4 +1,6 @@
 require 'action_view'
+require 'sprockets'
+require 'sprockets/helpers'
 
 module Flashcards
   module Plugins
