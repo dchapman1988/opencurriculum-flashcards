@@ -9,7 +9,7 @@ class AnswersController < ApplicationController
       if correct
         flash[:success] = t('answers.create.created_successfully_correct')
       else
-        flash[:error] = t('answers.create.created_successfully_incorrect')
+        flash[:error]   = t('answers.create.created_successfully_incorrect')
       end
     else
       flash[:error] = t('answers.create.created_unsuccessfully')

@@ -11,11 +11,11 @@ class CardDecorator < ApplicationDecorator
 
   def embed_plugins string
     while string =~ /\[%=([^\]%].*)%\]/   # Matches [%= pronounce foo %]
-      the_match = Regexp.last_match
-      keh_code = $1
-      module_output = ""
+      the_match         = Regexp.last_match
+      keh_code          = $1
+      module_output     = ""
       plugin_invocation = keh_code.strip
-      method, *rest = plugin_invocation.split(' ')
+      method, *rest     = plugin_invocation.split(' ')
       rest = rest.join(' ')
       plugin_hash = Flashcards::PluginManager.instance.plugin_hash
       if plugin_hash.has_key?(method)

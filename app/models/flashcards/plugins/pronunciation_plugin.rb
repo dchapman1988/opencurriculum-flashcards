@@ -16,10 +16,10 @@ module Flashcards
       end
 
       def execute!
-        audio_file = ::Utility::PronunciationFileFetcher.new(@word, Wordnik.word).execute!
-        audio_tag = tag(:audio, src: audio_file, preload: 'auto')
-        image = image_tag('vendor/wordnik/wordnik_badge_a2.png')
-        attribution_tag = link_to(image, "http://www.wordnik.com/word/#{@word}")
+        audio_file                  = ::Utility::PronunciationFileFetcher.new(@word, Wordnik.word).execute!
+        audio_tag                   = tag(:audio, src: audio_file, preload: 'auto')
+        image                       = image_tag('vendor/wordnik/wordnik_badge_a2.png')
+        attribution_tag             = link_to(image, "http://www.wordnik.com/word/#{@word}")
         attribution_tag + audio_tag
       end
     end
