@@ -1,5 +1,3 @@
-require 'sprockets'
-
 # Load flashcards files
 Dir["#{File.dirname(__FILE__)}/flashcards/**/*.rb"].each { |f| require f }
 
