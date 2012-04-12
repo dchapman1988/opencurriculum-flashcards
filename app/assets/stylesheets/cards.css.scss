@@ -1,0 +1,41 @@
+.card-side{
+  padding: 1em;
+  width: 5 * $card-unit;
+  min-height: 3 * $card-unit;
+  background-color: $card-background-color;
+  text-align: center;
+  @include single-box-shadow($drop-shadow-color);
+
+  .content{
+    min-height: $card-unit;
+    margin: auto;
+    font-size: 2em;
+    p{
+      font-size: 2em;
+      line-height: 2em;
+    }
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  body{
+    margin-top: 85px;
+  }
+
+  .card-side{
+    padding: .25em;
+    width: 3 * $card-unit;
+    min-height: 3 * $card-unit;
+  }
+}
+
+.back-content{
+  display: none;
+  clear: right;
+}
+
+.card-content{
+  float: left;
+  margin-right: 2em;
+}

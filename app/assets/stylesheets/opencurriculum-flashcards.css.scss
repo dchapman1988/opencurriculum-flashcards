@@ -1,14 +1,23 @@
-@import 'bootstrap';
-@import "compass/css3";
-
+/* Variables */
 $card-unit: 8em;
 $card-background-color: #f6f6f6;
 $drop-shadow-color: rgba(black, 0.2);
 
-/* apply a natural box layout model to all elements */
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+/* Imports */
+@import 'bootstrap';
+@import "compass/css3";
+@import "cards";
 
-// Make images fit containers
+/* Base styles *
+
+/* apply a natural box layout model to all elements */
+body {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* Make images fit containers */
 img, iframe { max-width: 100%; max-height: 100%;}
 
 body{
@@ -16,44 +25,9 @@ body{
   background-color: white;
 }
 
-.card-side{
-  padding: 1em;
-  width: 5 * $card-unit;
-  min-height: 3 * $card-unit;
-  background-color: $card-background-color;
-  text-align: center;
-  @include single-box-shadow($drop-shadow-color);
-
-  .content{
-    min-height: $card-unit;
-    margin: auto;
-    font-size: 2em;
-    p{
-      font-size: 2em;
-      line-height: 2em;
-    }
-  }
-}
-
-// Landscape phones and down
+/* Landscape phones and down */
 @media (max-width: 480px) {
   body{
     margin-top: 85px;
   }
-
-  .card-side{
-    padding: .25em;
-    width: 3 * $card-unit;
-    min-height: 3 * $card-unit;
-  }
-}
-
-.back-content{
-  display: none;
-  clear: right;
-}
-
-.card-content{
-  float: left;
-  margin-right: 2em;
 }
