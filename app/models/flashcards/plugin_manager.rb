@@ -22,9 +22,5 @@ module Flashcards
       plugins.each{|p| h[p.method_name] = p.klass }
       h
     end
-
-    def self.load_all
-      Flashcards::Plugin.new('pronounce', Flashcards::Plugins::PronunciationPlugin, Flashcards::PluginManager.instance)
-    end
   end
 end

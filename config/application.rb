@@ -55,9 +55,5 @@ module OpencurriculumFlashcards
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
-
-    config.to_prepare do
-      Flashcards::PluginManager.load_all
-    end
   end
 end
