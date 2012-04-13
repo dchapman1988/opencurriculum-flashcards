@@ -1,6 +1,6 @@
 require 'use_case_helper'
 
-describe UseCase::Card::Create do
+describe UseCase::Answer::Create do
   describe "when executed" do
     before do
       card = {}
